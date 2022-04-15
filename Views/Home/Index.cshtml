@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to Bulls and Cows game!</h1>
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <p>Please <a asp-controller="Account" asp-action="Login">Login</a> to play</p>
+        
+    }
+    
+    <p><a href="https://en.wikipedia.org/wiki/Bulls_and_Cows">Learn about this game</a>.</p>
+</div>

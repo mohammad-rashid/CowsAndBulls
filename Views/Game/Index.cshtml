@@ -1,0 +1,25 @@
+﻿@model BullsAndCows.Models.GameModel
+
+<h1>Bulls and Cows</h1>
+<form method="post">
+  <label>Guess The Number:
+    <input asp-for = "userInput" >
+  </label>
+  <button id="btn">Submit</button>
+</form>
+<p>@ViewBag.msg</p>
+<p>Bull : @ViewBag.bull</p>
+<p>Cow : @ViewBag.cow</p>
+<p>Turn : <span id="display"></span></p>
+<p style=bold>@ViewBag.won</p>
+
+<script type="text/javascript">
+        var count = 0;
+        var btn = document.getElementById("btn");
+        var disp = document.getElementById("display");
+  
+        btn.onclick = function () {
+            count++;
+            disp.innerHTML = count;
+        }
+    </script>
